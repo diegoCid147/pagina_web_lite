@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juego de Adivinar el Número</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            display: inline-block;
+            position: relative;
+            margin-right: 10px; /* Agrega un margen entre los elementos */
+        }
+
+        ul li:hover ul {
+            display: block;
+        }
+
+        ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f1f1f1;
+            padding: 0;
+        }
+
+        ul ul li {
+            display: block;
+        }
+
+        ul ul li a {
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        ul ul li a:hover {
+            background-color: #ddd;
+        }
+
+        .boton-bonito {
+            background-color: #DCDCDC;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none; /* Elimina el subrayado predeterminado */
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .boton-bonito:hover {
+            background-color: #0050a2;
+        }
+        body {
+            margin: 0px;
+            padding: 10px;
+            background-image: url('fondo del juegoc.jpg'); /* Ruta a tu imagen de fondo */
+            background-repeat: repeat; /* Repite la imagen en ambas direcciones (horizontal y vertical) */
+            font-family: Arial, sans-serif;
+            color: #fff; /* Cambia el color del texto si es necesario */
+        }
+        h1 {
+            color: #333;
+        }
+        #message {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>
+            <button class="boton-bonito">
+                <img src="imagenicono.png" width="25" style="vertical-align: middle;">
+            </button>
+            <ul>
+                <li><a href="htmlpaginaweb.html">Inicio</a></li>
+                <li><a href="bibliografia.html">Biografia</a></li>
+                <li><a href="contenido.html">Contenido del libro</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="juego.html">Juego</a></li>
+            </ul>
+        </li>        
+    </ul>
+    <br><br><br>
+    <center>
+        <h1 style="color: white;">Adivina el Número</h1>
+        <p>Estoy pensando en un número entre 1 y 100. ¿Puedes adivinar cuál es?</p>
+        <input type="number" id="guessInput">
+        <button onclick="checkGuess()">Adivinar</button>
+        <p id="message"></p>
+    </center>
+    <script>
+        // Generar un número aleatorio entre 1 y 100
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        // Inicializar el contador de intentos
+        let attempts = 0;
+
+        function checkGuess() {
+            // Obtener el valor ingresado por el jugador
+            const guess = parseInt(document.getElementById('guessInput').value);
+
+            // Incrementar el contador de intentos
+            attempts++;
+
+            // Obtener el elemento de mensaje
+            const message = document.getElementById('message');
+
+            // Comprobar si el número es correcto
+            if (guess === randomNumber) {
+                message.textContent = `¡Felicidades! Adivinaste el número ${randomNumber} en ${attempts} intentos.`;
+                message.style.color = 'green';
+                document.getElementById('guessInput').disabled = true;
+            } else if (guess < randomNumber) {
+                message.textContent = 'El número es mayor. Intenta de nuevo.';
+                message.style.color = 'red';
+            } else {
+                message.textContent = 'El número es menor. Intenta de nuevo.';
+                message.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
