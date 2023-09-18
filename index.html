@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable</title>
+    <style>
+        /* Estilos para el menú */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        ul li:hover ul {
+            display: block;
+        }
+
+        ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f1f1f1;
+            padding: 0;
+        }
+
+        ul ul li {
+            display: block;
+        }
+
+        ul ul li a {
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        ul ul li a:hover {
+            background-color: #ddd;
+        }
+
+        .boton-bonito {
+            background-color: #DCDCDC;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none; /* Elimina el subrayado predeterminado */
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .boton-bonito:hover {
+            background-color: #0050a2;
+        }
+        body {
+            margin: 0px;
+            padding: 10px;
+            background-image: url('portada del libro.png'); /* Ruta a tu imagen de fondo */
+            background-repeat: repeat; /* Repite la imagen en ambas direcciones (horizontal y vertical) */
+            font-family: Arial, sans-serif;
+            color: #fff; /* Cambia el color del texto si es necesario */
+        }
+        .contenido {
+            padding: 20px;
+            text-align: center;
+        }
+        .cuadro-con-imagen {
+            width: 300px;
+            height: 150px;
+
+            background-image: url('cadena roja.png'); /* Reemplaza con la ruta de tu imagen */
+            background-repeat: repeat;
+            /*background-size: cover;  Ajusta el tamaño de la imagen al cuadro */
+            background-position: center; /* Centra la imagen en el cuadro */
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body bgcolor="black">
+    <font color="white">
+        <ul>
+            <li>
+            <button class="boton-bonito">
+                <img src="imagenicono.png" width="25" style="vertical-align: middle;">
+            </button>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="bibliografia.html">Biografia</a></li>
+                    <li><a href="contenido.html">Contenido del libro</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="juego.html">Juego</a></li>
+                </ul>
+            </li>
+        </ul>
+        <center>
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <div class="cuadro-con-imagen">
+                    <p>
+                        <h1>Código 1567</h1>
+                        <h4>Sebastian Alejandro Ramírez Guzmán</h4>
+                    </p>
+                </div>
+        </center>
+    </font>
+</body>
+</html>
