@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>contenido del libro</title>
     <style>
-        /* Estilos para el menú */
+    /* Estilos para el menú */
         ul {
             list-style-type: none;
             padding: 0;
@@ -74,16 +74,70 @@
             border-radius: 5px; /* Borde redondeado */
             cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
         }
-        body {
-            margin: 0px;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-            color: black;
-            background: linear-gradient(45deg, indianRed, darkSalmon, crimson, firebrick, darkred, maroon, brown);
+    body{
+        /*display: flex;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;*/
+        font-family: Arial, sans-serif;
+        background: linear-gradient(45deg, indianRed, darkSalmon, crimson, firebrick, darkred, maroon, brown);
+    }
+    *{
+        margin: 10;
+        padding: 10;
+
+    }
+    h1{
+        font-size: 2rem;
+        position: absolute;
+    }
+
+    .border{
+        color: black;
+        text-shadow:
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            1px 1px 0 black,
+            -1px 1px 0 black
+    }
+    .wave{
+        color: red/*#000080*/;
+        animation: wave 3s ease-in-out infinite;
+    }
+    @keyframes wave{
+        0%, 100%{
+            clip-path: polygon(
+                0% 47%,
+                10% 48%,
+                33% 54%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%
+            );
         }
-    </style>
+        50%{
+            clip-path: polygon(
+                0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 50%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%
+            );
+        }
+    }
+
+</style>
 </head>
+
 <body>
+    
     <button class="boton-fijo">
         <a href="#indice">
             Índice
@@ -93,7 +147,13 @@
     <a name="indice">
         </a>
         <div id="indice">
+    <center>
     <ul>
+        <li>
+            <button class="boton-bonito" id="playButton">
+                <img src="play.png" width="25" style="vertical-align: middle;">
+            </button>
+        </li>
         <li>
             <button class="boton-bonito">
                 <img src="imagenicono.png" width="25" style="vertical-align: middle;">
@@ -106,6 +166,7 @@
                 <li><a href="juego.html">Juego</a></li>
             </ul>
         </li>
+        
         <li>
             <button class="boton-bonito" style="color: black;">Índice</button>
             <ul>
@@ -117,6 +178,7 @@
                 <li><a href="#seccion6">Diálogos y personajes</a></li>
             </ul>
         </li>
+    </center>
         </ul>
     <!--finaliza la seccion de indice-->
     <!--inicia la informacion del libro-->
@@ -125,7 +187,9 @@
         </a>
         <div id="seccion1">
             <font style="color: white;">
-            <h1>Sinopsis</h1>
+                <h1 class="border">Sinopsis</h1>
+                <h1 class="wave">Sinopsis</h1>
+                <br><br>
                 <p encode="utf-8" style="color: white;">
                     La tensión entre las potencias mundiales se encontraba colgando de un hilo. toda la atención del<br>mundo se centraba en las acciones que realizaban corea del norte y EE.UU. con el miedo y la angustia<br>de una posible tercera guerra mundial, el resto de las grandes potencias necesitaba elegir un bando...<br><br>Alexander Rogers, un joven canadiense residente de briedlewood, quien luego de un terrible accidente es<br>intervenido, sobrevive gracias a un virus experimental creado por los rusos.<br>Yerik Pierce, la cabeza al mando del proyecto, se hizo de los servicios de Víctor Savage, uno de los<br>hombres más buscados por la interpol, para buscar y traer de vuelta a su experimento.<br><br>El joven Rogers decide adentrarse en la búsqueda de respuestas y, junto con sus amigos, se emprende<br>en un viaje para acabar de una vez por todas con todo lo que estaba sucediendo, antes de ser demasiado<br>tarde...
                 </p>
@@ -140,9 +204,11 @@
         <a name="seccion2">
         </a>
         <div id="seccion2">
-            <h1>Contextualización</h1>
-                <p encode="utf-8" style="color: black;">
-                
+            <h1 class="border">Contextualización</h1>
+                <h1 class="wave">Contextualización</h1>
+                <br><br>
+                <p encode="utf-8" style="color: white;">
+                    La obra se desarrolla en él sigo XXI, por lo tanto, es una obra moderna, el autor la crea con técnicas modernas,<br>no utiliza la rima ni está escrito en verso. A lo largo de la obra se utiliza un lenguaje y vocabulario coloquial,<br>algunas veces el autor utiliza términos y palabras un poco más técnicas, pero la mayor parte de la obra es simple.
                 </p>
 
     <!--finaliza la Contextualización-->
@@ -153,7 +219,9 @@
         <a name="seccion3">
         </a>
         <div id="seccion3">
-            <h1>Elementos estilísticos</h1>
+            <h1 class="border">Elementos estilísticos</h1>
+                <h1 class="wave">Elementos estilísticos</h1>
+                <br><br>
                 <p encode="utf-8">
                     <li>Figuras retóricas
                         <ol>
@@ -164,9 +232,21 @@
                     </li>
                     <li>Elección de palabras, tono, ritmo, cadencia y uso de coloquialismos
                         <ol>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+                            <li>preguntarle a eli</li>
+
                         </ol>
                     </li>
                 </p>
@@ -178,7 +258,9 @@
         <a name="seccion4">
         </a>
         <div id="seccion4">
-            <h1>Análisis de estructura y narración</h1>
+            <h1 class="border">Análisis de estructura y narraciónAnálisis de estructura y narración</h1>
+                <h1 class="wave">Análisis de estructura y narración</h1>
+                <br><br>
                 <p encode="utf-8">
                     <h3>Estructura</h3>Utiliza un par de saltos en el tiempo, esto afecta a la historia y la hace avanzar un poco más rápido,<br>pero a la historia no la afecta de gran manera, ya que se entiende lo que sucede en ese salto de tiempo.<br><h3>Narrador</h3>Narrador equisciente 
                 
@@ -191,7 +273,9 @@
         <a name="seccion5">
         </a>
         <div id="seccion5">
-            <h1>Descripciones y ambientación</h1>
+            <h1 class="border">Descripciones y ambientaciónDescripciones y ambientación</h1>
+                <h1 class="wave">Descripciones y ambientación</h1>
+                <br><br>
                 <p encode="utf-8">
                     <ol>
                             <li>
@@ -243,12 +327,14 @@
         <a name="seccion6">
         </a>
         <div id="seccion6">
-            <h1>Diálogos y personajes</h1>
+            <h1 class="border">Diálogos y personajesDiálogos y personajes</h1>
+                <h1 class="wave">Diálogos y personajes</h1>
+                <br><br>
                 <h3>
                     Diálogos
                 </h3>
                 <p encode="utf-8">
-                    Los diálogos en esta obra son realistas, ya que hablan de cosas las cuales sí podrían llegar a suceder en<br>la vida real, pero también hay conversaciones surrealistas, como por ejemplo cuando se habla de la<br>droga que le inyectan al protagonista.
+                    En esta obra los diálogos son realistas, ya que hablan de cosas las cuales sí podrían llegar a suceder en<br>la vida real, pero también hay conversaciones surrealistas, como por ejemplo cuando se habla de la<br>droga que le inyectan al protagonista.
                 </p>
                 <h3>
                     Personajes
@@ -264,18 +350,48 @@
         <a name="seccion7">
         </a>
         <div id="seccion7">
-            <h1>Tono y temas</h1>
+            <h1 class="border">Tono y temas</h1>
+                <h1 class="wave">Tono y temas</h1>
+                <br><br>
+
                 <h3>
                     Tono
                 </h3>
                 <p encode="utf-8">
-                    
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+
                 </p>
                 <h3>
                     Temas
                 </h3>
                 <p encode="utf-8">
-                    
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
+                    <li>preguntarle a eli</li>
                 </p>
     <!--finaliza la informacion de Tono y temas-->
 
@@ -285,7 +401,9 @@
     <a name="seccion8">
     </a>
     <div id="seccion8">
-        <h1>Uso de lenguaje regional y cultural</h1>
+        <h1 class="border">Uso de lenguaje regional y cultural</h1>
+        <h1 class="wave">Uso de lenguaje regional y cultural</h1>
+                <br><br>
             <h3>
                 Lenguaje y cultura
             </h3>
@@ -295,7 +413,49 @@
     <!--finaliza la informacion de Uso de lenguaje regional y cultural-->
 
     <img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png"><img src="cadena roja.png">
-
     <!--finaliza la informacion del libro-->
+    <audio autoplay loop>
+        <source href="y2mate.com - David Guetta  Lovers On The Sun Official Video ft Sam Martin.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
 </body>
+<!-- Botón de reproducción -->
+    
+
+    <!-- Elemento de audio -->
+    <audio id="myAudio" loop>
+        <source src="C:\Users\diego\OneDrive\Desktop\C5E\LITERATURA\2.2\pagina completa\y2mate.com - David Guetta  Lovers On The Sun Official Video ft Sam Martin.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Script JavaScript para controlar la reproducción -->
+    <script>
+    // Obtener referencias a los elementos de audio y el botón
+    var audio = document.getElementById("myAudio");
+    var playButton = document.getElementById("playButton");
+
+    // Variable para controlar el estado del audio
+    var isPlaying = false;
+
+    // Agregar un evento de clic al botón de reproducción
+    playButton.addEventListener("click", function() {
+        // Verificar si el audio ya se está reproduciendo
+        if (audio.paused) {
+            // Iniciar la reproducción si está pausado
+            audio.play();
+            playButton.innerHTML = '<img src="playnt.png" width="25" style="vertical-align: middle;">'; // Cambiar el contenido del botón
+            isPlaying = true;
+        } else {
+            // Pausar la reproducción si ya está reproduciendo
+            audio.pause();
+            playButton.innerHTML = '<img src="play.png" width="25" style="vertical-align: middle;">'; // Cambiar el contenido del botón
+            isPlaying = false;
+        }
+    });
+
+    // También puedes detener la reproducción cuando el audio llega al final
+    audio.addEventListener("ended", function() {
+        playButton.innerHTML = '<img src="playnt.png" width="25" style="vertical-align: middle;">'; // Cambiar el contenido del botón al final de la reproducción
+        isPlaying = false;
+    });
+</script>
 </html>
